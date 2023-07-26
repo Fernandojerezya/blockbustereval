@@ -1,8 +1,7 @@
-<%= form_with(model: movie) do |form| %>
+<%= form_with(model: movie, class: "my-form") do |form| %>
   <% if movie.errors.any? %>
-    <div style="color: red">
+    <div class="alert alert-danger">
       <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
-
       <ul>
         <% movie.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -11,17 +10,15 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :client_id, style: "display: block" %>
-    <%= form.select :client_id, options_for_select(@clients) %>
+  <div class="mb-3">
+    <%= form.label :client_id, class: "form-label" %>
+    <%= form.select :client_id, options_for_select(@clients), { include_blank: true }, class: "form-select" %>
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+  <%= form.submit "Submit", class: "btn btn-primary" %>
 <% end %>

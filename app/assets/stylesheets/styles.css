@@ -1,0 +1,23 @@
+/* Estilos para el fondo degradado de la barra de navegación */
+.navbar {
+    background: linear-gradient(to bottom right, #8E24AA, #2196F3);
+  }
+  
+  
+  /* Estilos para el enlace de la marca (BlockBuster) en la barra de navegación */
+  .navbar-brand {
+    color: #FFD700; /* Color dorado */
+    font-weight: bold;
+  }
+  
+  /* Estilos para los enlaces del menú (Clients y Movies) en la barra de navegación */
+  .navbar-nav .nav-link {
+    color: #FFFFFF; /* Color blanco */
+    font-weight: bold;
+  }
+
+  /* Estilos personalizados para el formulario */
+.my-form {
+    width: 33.33%; /* El formulario ocupará un tercio del ancho de la pantalla */
+    margin-top: 20px; /* Ajusta el margen superior */
+  }
